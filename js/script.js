@@ -63,14 +63,20 @@ function generatePassword() {
     var pickChoices = choices[Math.floor(Math.random() * choices.length)];
     password.push(pickChoices);
   }
-  console.log(password)
+
+  var pwd = password.join("");
+  UserInput(pwd);
+  return pwd;
+  function UserInput(pwd) {
+    document.getElementById("password").textContent = pwd;
+  }
 }
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//research array.join in js to find solution
+
 
 
 
